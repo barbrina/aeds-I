@@ -28,9 +28,9 @@
 
 <p align="justify"> 1 - A matriz foi criada e padronizada com 7 linhas e 7 colunas.
 
-<p align="justify"> 2 - Após declarar a matriz, seus valores são preenchidos com números randômicos de 0 a 99.
+<p align="justify"> 2 - Após declarada a matriz, seus valores são preenchidos com números randômicos de 0 a 99.
 
-<p align="justify"> 3 - O tratamento das regras do jogo é feito através da monitoração dos valores em volta do valor atual e a checagem do maior valor entre eles.=-
+<p align="justify"> 3 - O tratamento das regras do jogo é feito através da monitoração dos valores em volta do valor atual e a checagem do maior valor entre eles.
 
 <p align="justify"> 4 - Após a checagem, o caminho da matriz é mostrado na tela, assim como a soma de todos os valores que compõem o maior caminho.
 
