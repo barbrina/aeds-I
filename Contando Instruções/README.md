@@ -29,6 +29,8 @@
 <p align="justify"> 1 - A matriz foi criada e padronizada com 7 linhas e 7 colunas.
 
 <p align="justify"> 2 - Após declarada a matriz, seus valores são preenchidos com números randômicos de 0 a 99.
+  
+![alt text](https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/MatrizInicial.png)
 
 <p align="justify"> 3 - O tratamento das regras do jogo é feito através da monitoração dos valores em volta do atual, a começar pelo início [0,0] e a checagem do maior valor entre eles.
 
@@ -36,7 +38,7 @@
   
 <p align="justify"> 5 - Por fim, o caminho da matriz é mostrado na tela, assim como a soma de todos os valores que compõem o maior caminho.
 
-<img>
+![alt text](https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/MatrizFinal.png)
 
 ## Perguntas:
 
