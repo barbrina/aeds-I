@@ -4,7 +4,9 @@ int main()
 {
     srand(time(NULL));
 
-    matriz[n][n] = Preencher(n);
-    Imprimir(n);
-    checarMapa(n);
+    Preencher(N);
+    Imprimir(N);
+    ChecarMapa(N);
+
+    return 0;
 }

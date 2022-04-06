@@ -3,15 +3,36 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <time.h>
 #define N 7
 
-int matriz[N][N];
+typedef struct data
+{
+    int valor;
+    bool pin;
+} Data;
 
-int Preencher(int n);
-void Imprimir(int n);
+Data matriz[N][N];
 
-void checarMapa(int n);
-int checarValor(int valor, int *posicao, int lin, int col, int fim);
+typedef struct valores
+{
+    int direita;
+    int esquerda;
+    int baixo;
+} Valores;
+
+Valores p;
+
+void Preencher();
+
+void ChecarMapa();
+int ChecarValor(int valor, int *posicao, int lin, int col, int fim);
+int ChecarMaior(int valor, int *pant, int soma, int lin, int col);
+
+void Imprimir();
+
+void Vermelho();
+void Reset();
 
 #endif
