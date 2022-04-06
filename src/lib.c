@@ -1,91 +1,118 @@
 #include "lib.h"
 
-int Preencher(int n)
+void Preencher()
 {
-    int lin, col;
-
-    for (lin = 0; lin < n; lin++)
+    for (int lin = 0; lin < N; lin++)
     {
-        for (col = 0; col < n; col++)
+        for (int col = 0; col < N; col++)
         {
-            matriz[lin][col] = rand() % 99;
+            matriz[lin][col].valor = rand() % 99;
+            matriz[lin][col].pin = false;
         }
     }
-    return matriz[lin][col];
 }
 
-void checarMapa(int fim)
+void ChecarMapa(int fim)
 {
-    int atual, lin, col, direita, esquerda, baixo, soma; // talvez fazer uma struct?
-    int posicao[2];
-
+    int soma, pant[2], lin, col;
     lin = 0, col = 0;
-    atual = matriz[lin][col];
-    soma = atual;
+
+    matriz[lin][col].pin = true;
+    soma = matriz[lin][col].valor;
 
     do
     {
-        direita = matriz[lin][col + 1];
-        esquerda = matriz[lin][col - 1];
-        baixo = matriz[lin + 1][col];
 
-        direita = checarValor(direita, posicao, lin, col + 1, fim - 1);
-        esquerda = checarValor(esquerda, posicao, lin, col - 1, fim - 1);
-        baixo = checarValor(baixo, posicao, lin + 1, col, fim - 1);
+        // Atualiza os valores de direita, esquerda e baixo
+
+        p.direita = matriz[lin][col + 1].valor;
+        p.esquerda = matriz[lin][col - 1].valor;
+        p.baixo = matriz[lin + 1][col].valor;
+
+        // Checa se os valores de direita, esquerda e baixo seguem as regras, caso não, viram -1
+
+        p.direita = ChecarValor(p.direita, pant, lin, col + 1, fim - 1);
+        p.esquerda = ChecarValor(p.esquerda, pant, lin, col - 1, fim - 1);
+        p.baixo = ChecarValor(p.baixo, pant, lin + 1, col, fim - 1);
+
+        // Checa todas as regras
 
         if (lin == fim - 1)
         {
-            esquerda = -1;
+            p.esquerda = -1;
         }
-        if ((direita >= baixo) && (direita >= esquerda))
+        if ((p.direita >= p.baixo) && (p.direita >= p.esquerda))
         {
-            posicao[0] = lin;
-            posicao[1] = col;
-            atual = direita;
-            soma += direita;
+            soma = ChecarMaior(p.direita, pant, soma, lin, col);
             col += 1;
         }
-        else if ((baixo >= direita) && (baixo >= esquerda))
+        else if ((p.baixo >= p.direita) && (p.baixo >= p.esquerda))
         {
-            posicao[0] = lin;
-            posicao[1] = col;
-            atual = baixo;
-            soma += baixo;
+            soma = ChecarMaior(p.baixo, pant, soma, lin, col);
             lin += 1;
         }
-        else if ((esquerda >= direita) && (esquerda >= baixo))
+        else if ((p.esquerda >= p.direita) && (p.esquerda >= p.baixo))
         {
-            posicao[0] = lin;
-            posicao[1] = col;
-            atual = esquerda;
-            soma += esquerda;
+            soma = ChecarMaior(p.esquerda, pant, soma, lin, col);
             col -= 1;
         }
 
+        matriz[lin][col].pin = true;
+
     } while (lin + 1 != fim || col + 1 != fim);
 
-    printf("\nSOMA: %d", soma);
+    printf("\nCAMINHO \n");
+
+    Imprimir();
+
+    printf("\nSOMA: %d\n", soma);
 }
 
-int checarValor(int valor, int posicao[2], int lin, int col, int fim)
+int ChecarValor(int valor, int p[2], int lin, int col, int fim)
 {
-    if ((lin == posicao[0] && col == posicao[1]) || lin > fim || col < 0 || col > fim)
+    if ((lin == p[0] && col == p[1]) || lin > fim || col < 0 || col > fim)
     {
         valor = -1;
     }
     return valor;
 }
 
-void Imprimir(int n)
-{
-    int lin, col;
+// Checa o maior valor e o retorna
 
-    for (lin = 0; lin < n; lin++)
+int ChecarMaior(int valor, int pant[2], int soma, int lin, int col)
+{
+    pant[0] = lin;
+    pant[1] = col;
+    soma += valor;
+
+    return soma;
+}
+
+void Imprimir()
+{
+    for (int lin = 0; lin < N; lin++)
     {
-        for (col = 0; col < n; col++)
+        for (int col = 0; col < N; col++)
         {
-            printf("[ %02d ]", matriz[lin][col]);
+            if (!matriz[lin][col].pin)
+                printf("[ %02d ]", matriz[lin][col].valor);
+            else
+            {
+                Vermelho();
+                printf("[ %02d ]", matriz[lin][col].valor);
+                Reset();
+            }
         }
         printf("\n");
     }
+}
+
+void Vermelho()
+{
+    printf("\033[0;31m");
+}
+
+void Reset()
+{
+    printf("\033[0m");
 }
