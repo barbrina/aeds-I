@@ -30,7 +30,9 @@
 
 <p align="justify"> 2 - Após declarada a matriz, seus valores são preenchidos com números randômicos de 0 a 99.
   
-![alt text](https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/MatrizInicial.png)
+<p align="center">
+<img src=https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/MatrizInicial.png>
+</p>
 
 <p align="justify"> 3 - O tratamento das regras do jogo é feito através da monitoração dos valores em volta do atual, a começar pelo início [0,0] e a checagem do maior valor entre eles.
 
@@ -38,8 +40,10 @@
   
 <p align="justify"> 5 - Por fim, o caminho da matriz é mostrado na tela, assim como a soma de todos os valores que compõem o maior caminho.
 
-![alt text](https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/MatrizFinal.png)
-
+<p align="center">
+<img src=https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/MatrizFinal.png>
+</p>
+  
 ## Perguntas:
 
 <p align="justify"> 1 - Há mais de uma maneira de resolver esse problema?
@@ -52,4 +56,4 @@
 
 <p align="justify"> 3 - Pode existir mais de um caminho cujo valor total é o máximo?
 
-<p align="justify"> </p>
+<p align="justify"> Sim, é possível existir mais de um caminho cujo valor total é o máximo, como no caso da matriz ter valores iguais. O caminho depende também das regras implementadas no programa, se ele irá para direita, esquerda ou baixo em caso de valores iguais.</p>
