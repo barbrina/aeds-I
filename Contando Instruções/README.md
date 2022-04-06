@@ -30,7 +30,7 @@
 
 <p align="justify"> 2 - Após declarada a matriz, seus valores são preenchidos com números randômicos de 0 a 99.
 
-<p align="justify"> 3 - O tratamento das regras do jogo é feito através da monitoração dos valores em volta do valor de início, o [0,0] e a checagem do maior valor entre eles.
+<p align="justify"> 3 - O tratamento das regras do jogo é feito através da monitoração dos valores em volta do atual, a começar pelo início [0,0] e a checagem do maior valor entre eles.
 
 <p align="justify"> 4 - Após a checagem, a partir das regras, a matriz é percorrida pela direita, esquerda ou baixo.
   
