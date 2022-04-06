@@ -20,7 +20,7 @@
 
 <p align="justify">Observe um exemplo logo abaixo para uma matriz com N = 7. </p>
 
-<img>
+![alt text](https://github.com/barbrina/AEDS-I/blob/master/Contando%20Instru%C3%A7%C3%B5es/img/Contando.png)
 
 ## Desenvolvimento do Problema
 
