@@ -1,0 +1,98 @@
+#include "Lista.h"
+
+void FLVazia(Lista *l)
+{
+    Dados aux;
+    for (int i = 0; i < MAXTAM; i++)
+    {
+        aux.dna = 0;
+        l->vet[i] = aux;
+    }
+    l->primeiro = 0;
+    l->ultimo = 0;
+}
+
+void insere_lista(Lista *l, Dados dado)
+{
+    if (l->ultimo == MAXTAM)
+    {
+        printf("Lista cheia.\n");
+    }
+    else
+    {
+        l->vet[l->ultimo] = dado;
+        l->ultimo++;
+    }
+}
+
+void percorre_lista(Lista *l, Lista *n) // Percorre a lista procurando a substring no DNA
+{
+    int i = n->primeiro, j = l->primeiro;
+    int inicio = 0, fim = 0, soma = 0;
+    bool chave;
+
+    while (i < n->ultimo)
+    {
+        while (j < l->ultimo)
+        {
+            if (!strcmp(n->vet[i].dna, l->vet[j].dna))
+            {
+                soma++;
+                if (n->vet[i].dna == n->vet[0].dna) // seta o início
+                {
+                    inicio = j;
+                }
+                else if (soma == n->ultimo) // encontra o fim
+                {
+                    chave = true;
+                    fim = j;
+                    i = n->ultimo;
+                    j = l->ultimo;
+                }
+                i++;
+                j++;
+            }
+            else
+            {
+                j -= soma;
+                soma = 0;
+                j++;
+                i = n->primeiro; // Recomeça a comparação
+            }
+        }
+        if (!(chave) && j == l->ultimo) // Caso não encontre toda a substring, tenta a mesma menos uma posição
+        {
+            n->ultimo -= 1;
+            soma = 0;
+            j = l->primeiro;
+        }
+    }
+    Imprime(l, inicio, fim);
+}
+
+void Imprime(Lista *l, int inicio, int fim)
+{
+    for (int i = l->primeiro; i < l->ultimo; i++)
+    {
+        if (i >= inicio && i <= fim)
+        {
+            Vermelho();
+            printf("%s", l->vet[i].dna);
+            Reset();
+        }
+        else
+        {
+            printf("%s", l->vet[i].dna);
+        }
+    }
+}
+
+void Vermelho()
+{
+    printf("\033[0;31m");
+}
+
+void Reset()
+{
+    printf("\033[0m");
+}
