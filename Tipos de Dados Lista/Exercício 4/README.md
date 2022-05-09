@@ -1,5 +1,7 @@
 # Exercício 4
 
+<img align="center" height="20px" width="80px" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg"/> 
+
 ## Problema Proposto:
 
 <p align="justify"> Em uma lista A temos um conjunto de elementos inteiros positivos ou não (a<sub>1</sub>, a<sub>2</sub>, . . . , a<sub>n</sub>). Elabore uma função que consiga encontrar neste conjunto a máxima soma. </p>
@@ -21,3 +23,34 @@
 <p align="center">
 <img src= https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%204/img/Lista%20N%C3%BAmeros.png>
 </p>
+
+## Compilação e Execução
+
+A lista linear disponibilizada possui um arquivo makefile que realiza todo o procedimento de compilação e execução. Para tanto, as seguintes diretrizes devem ser executadas em ordem:
+
+
+| Comando                |  Função                                                                                           |                     
+| -----------------------| ------------------------------------------------------------------------------------------------- |
+|  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
+|  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
+|  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
+
+## Contatos
+
+<div style="display: inline-block;">
+<a href="https://t.me/barbrinas">
+<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
+</a>
+
+<a href="https://www.linkedin.com/in/barbara-gualberto/">
+<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+</div>
+
+<p> </p>
+
+
+<a style="color:black" href="mailto:barbarabgual@gmail.com?subject=[GitHub]%20Exercicio%204">
+✉️ <i>barbarabgual@gmail.com</i>
+</a>
