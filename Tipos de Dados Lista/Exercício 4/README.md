@@ -56,6 +56,6 @@ A lista linear disponibilizada possui um arquivo makefile que realiza todo o pro
 <p> </p>
 
 
-<a style="color:black" href="mailto:barbarabgual@gmail.com?subject=[GitHub]%20Exercicio%204">
+<a style="color:black" href="mailto:barbarabgual@gmail.com?subject=[GitHub]%20Lista%20Linear">
 ✉️ <i>barbarabgual@gmail.com</i>
 </a>
