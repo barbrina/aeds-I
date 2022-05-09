@@ -40,8 +40,8 @@ dessas novas inserções?
 
 <p align="justify"> 1 - Como você gerenciaria os espaços em branco para novas inserções? Qual seria o custo dessas novas inserções?
   
-<p align="justify"> Os nomes removidos da lista ainda existem, apenas recebem uma chave “false” para que não sejam mostrados na tela. Dito isso, para novas inserções, o algoritmo faria uma varredura pela lista linear a procuras destas chaves e inseriria um novo nome a elas, assim como setaria novamente o valor da chave para “true”. O custo para estas novas inserções seria n, pois ele só percorre a lista uma única vez para cada nova inserção. </p
-  
+<p align="justify"> Os nomes removidos da lista ainda existem, apenas recebem uma chave “false” para que não sejam mostrados na tela. Dito isso, para novas inserções, o algoritmo faria uma varredura pela lista linear a procuras destas chaves e inseriria um novo nome a elas, assim como setaria novamente o valor da chave para “true”. O custo para estas novas inserções seria n, pois ele só percorre a lista uma única vez para cada nova inserção. </p>
+
 ## Compilação e Execução
 
 A lista linear disponibilizada possui um arquivo makefile que realiza todo o procedimento de compilação e execução. Para tanto, as seguintes diretrizes devem ser executadas em ordem:
