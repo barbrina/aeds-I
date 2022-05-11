@@ -20,17 +20,21 @@ dessas novas inserções?
 
 <p align="justify"> O problema foi desenvolvido da seguinte maneira: </p>
 
-<p align="justify"> 0 - Um arquivo com 100 nomes é criado e uma linha a mais é adicionada ao final do arquivo.
+<p align="justify"> 0) Um arquivo com 100 nomes é criado e cada nome deve ser separado por uma quebra de linha. Uma linha a mais deve ser adicionada ao final do arquivo como segue o exemplo.
 
-<p align="justify"> 1 - A lista vazia é declarada e seus valores são preenchidos com 0 e recebem uma chave “true”.
+<p align="center">
+<img src=https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%202/img/Arquivo.PNG>
+</p>
 
-<p align="justify"> 2 - Após declarada a lista, o arquivo para leitura de dados é aberto e a lista é preenchida por 100 nomes quaisquer.
+<p align="justify"> 1) A lista vazia é declarada e seus valores são preenchidos com 0 e recebem uma chave “true”.
 
-<p align="justify"> 3 - A lista é percorrida e os nomes iguais são encontrados e enviados para o método de remoção.
+<p align="justify"> 2) Após declarada a lista, o arquivo para leitura de dados é aberto e a lista é preenchida por 100 nomes quaisquer.
 
-<p align="justify"> 4 - No método de remoção, os nomes repetidos recebem uma chave de valor “false”.
+<p align="justify"> 3) A lista é percorrida e os nomes iguais são encontrados e enviados para o método de remoção.
+
+<p align="justify"> 4) No método de remoção, os nomes repetidos recebem uma chave de valor “false”.
   
-<p align="justify"> 5 - Por fim, a lista é mostrado na tela e todos os valores que receberam a chave “false”, ou seja, nomes repetidos, não são mostrados.
+<p align="justify"> 5) Por fim, a lista é mostrado na tela e todos os valores que receberam a chave “false”, ou seja, nomes repetidos, não são mostrados.
   
 <p align="center">
 <img src=https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%202/img/Lista%20de%20Nomes.png>
