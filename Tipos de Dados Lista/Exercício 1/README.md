@@ -12,14 +12,17 @@
 
 <p align="justify"> Estes dados são inseridos em uma lista através do método de inserção. Este método consiste em inserir valores na última posição de um vetor até que a lista esteja completamente cheia. </p>
 
+<p align="center">
 <img src=https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%201/img/Insercao.png>
 
 <p align="justify"> Para o método de pesquisa, uma variável recebe o valor primeiro. Em seguida, um loop é realizado e é somado a variável +1 quando o vetor[i] não é igual ao valor que se esteja procurando. O loop é encerrado quando se encontra o valor ou quando após percorrer toda a lista, o valor não é encontrado. O diagrama se encerra. </p>
 
+<p align="center">
 <img src=https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%201/img/Pesquisa.png>
 
 <p align="justify"> Para o método de remoção, após pesquisar o elemento a ser removido, pelo método de pesquisa, o índice de onde se encontra o valor é utilizado em outro loop. Neste segundo loop, ele segue o tamanho da lista, a partir do índice encontrado, sempre somando +1 a este. Ou seja, sempre atribui o valor da frente ao valor atual, a partir do valor que será removido. Por fim, o último valor da lista é subtraido, visto que um elemento da lista foi retirado. O diagrama se encerra. </p>
 
+<p align="center">
 <img src=https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%201/img/Remocao.png>
 </p>
   
