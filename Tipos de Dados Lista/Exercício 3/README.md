@@ -16,11 +16,13 @@
 
 <p align="justify"> O problema foi desenvolvido da seguinte maneira: </p>
 
-<p align="justify"> 0 - Dois arquivos um contendo uma base de DNA e o outro contendo uma substring de DNA foram criados.
+<p align="justify"> 0) Dois arquivos um contendo uma base de DNA e o outro contendo uma substring de DNA foram criados. Para o funcionamento correto do programa, os arquivos devem estar preenchidos com caracteres de letras maiúsculas, em sequencia e uma linha a mais deve ser adicionada ao final, como segue o exemplo abaixo:
   
 <p align="center">
-<img src= >
+<img src= https://github.com/barbrina/AEDS-I/blob/master/Tipos%20de%20Dados%20Lista/Exerc%C3%ADcio%203/img/Arquivo.PNG>
 </p>
+
+<p align="justify"> 1) 
 
 ## Compilação e Execução
 
