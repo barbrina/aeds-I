@@ -43,6 +43,7 @@ Lê-se um arquivo .txt onde:
  
  >*Observações:* 
  > - A primeira e a última posição da matriz NÃO podem ter o valor 1 (valor de barreira)
+ > - O método de leitura do arquivo permite apenas matrizes menores ou iguais a 9.
 >
 
  Como exemplo, temos o arquivo abaixo, o programa irá ler esse arquivo "Matriz.txt":
