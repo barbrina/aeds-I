@@ -7,7 +7,7 @@
 
 # Depth-First Search-DFS
 <div align="justify">
- A busca em profundidade(DFS) é um algoritmo utilizado para percorrer ou buscar itens dentro das estruturas de dados grafos ou árvores. Sua característica básica é percorrer todos os nós filhos ao nó raiz o mais profundo possível para somente depois retroceder. Iremos compreender a aplicação dessa mecânica no decorrer desse algoritmo.
+ A busca em profundidade (DFS) é um algoritmo utilizado para percorrer ou buscar itens dentro das estruturas de dados grafos ou árvores. Sua característica básica é percorrer todos os nós filhos ao nó raiz o mais profundo possível para somente depois retroceder. Iremos compreender a aplicação dessa mecânica no decorrer desse algoritmo.
 	<p> </p>	
  Existem várias formas de implementar uma busca em profundidade. Pela natureza de percorrer o grafo ou árvore enquanto houverem filhos não visitados, uma solução natural é utilizar recursão. Outra abordagem é utilizar um algoritmo iterativo e utilizar uma pilha (LIFO) para controlar os nós a serem visitados.
 </div>
@@ -31,23 +31,22 @@ Como a pilha é definida a partir de um vetor, muitas das caracteristicas de imp
 
 </div>
 
-## Algortimo
+## Algoritimo
 <div align="justify">
 Em nosso algoritmo, utilizaremos o método DFS para encontrar o caminho de saída de uma matriz quadrática que é um labirinto, onde as posições poderão ter dois valores possíveis:
  <ul>
   <li> 0 - Representa os lugares onde pode se passar;</li>
   <li> 1 - Representa os lugares onde NÃO pode se passar, as barreiras do labirinto.</li>
  </ul>
- Além de seu valor, haverá uma variável booleana que só será true quando a posição em que ela se encontra for verificada. Essa variável evitará que o algortimo confira a mesma posição mais de uma vez.
 
 Lê-se um arquivo .txt onde:
 <ul>
- <li> A primeira linha é o tamanho da matriz,número de linhas e número de colunas, respectivamente;</li>
+ <li> A primeira linha é o tamanho da matriz, representando o número de linhas e número de colunas, respectivamente;</li>
  <li> As outras linhas são as posições onde são encontradas as barreiras do labirinto.</li>
 </ul>
  
  >*Observações:* 
- > - A primeira e a última posição da matriz NÃO podem ter o valor 1(valor de barreira)
+ > - A primeira e a última posição da matriz NÃO podem ter o valor 1 (valor de barreira)
 >
 
  Como exemplo, temos o arquivo abaixo, o programa irá ler esse arquivo "Matriz.txt":
@@ -63,12 +62,20 @@ Lê-se um arquivo .txt onde:
  <img src=img/matriz.png alt=matriz> 
    <p> </p>
  </div>
- Na primeira etapa da execução do algoritmo,...
+Na primeira etapa da execução do algoritmo, ele empilha a posição 0, 0 (o início) da matriz. Então, ele confere a posição abaixo e percorre ela até bater em um obstáculo ou no fim da matriz, empilhando todas as posições percorridas. Nesse processo, as posições que já foram percorridas, recebem o valor 2 e não podem mais ser percorridas.
+	
+As posições que apresentam uma barreira fazem com que o algoritmo percorra outro caminho. Seguindo a ordem de olhar para baixo, direita, esquerda e acima, caso necessário. Caso o algoritmo se encontre preso entre barreiras, ele desempilha o topo da matriz e atribui o valor 1 a ela, dessa forma não passando mais por tal caminho, e em busca de outra posição para que ele possa percorrer.
  
- Por fim, o algoritmo retora a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
+Por fim, o algoritmo imprive a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
+ 
+
+
+Em sequência, ele desenfilera a cabeça da fila e olha a próxima posição, que seria a nova cabeça. Esse processo de desenfileirar e olhar a cabeça seguinte se repete até que se alcance a posição [N, N] da matriz. Como dito anteriormente, a forma encontrada para evitar que o algoritmo passe pela mesma posição repetidas vezes, é setando um novo valor para a posição já visitada e enfileirada, um valor diferente de 0.
+
+Por fim, o algoritmo imprive a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
  
 >*Interações:* 
- > - Variável que define o número de vezes que o algoritmo teve que conferir alguma posição, é incrementada toda vez que ....
+ > - Variável que define o número de vezes que o algoritmo teve que conferir alguma posição. É incrementado +1 toda vez que uma posição é empilhada, dessa forma, o primeiro e o último valor também são contabilizados.
 >
 </div>
 
@@ -76,7 +83,7 @@ Lê-se um arquivo .txt onde:
 
 O algoritmo DFS disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
 
-<div align="center">
+<div>
 
 | Comando                |  Função                                                                                           |
 | -----------------------| ------------------------------------------------------------------------------------------------- |
@@ -91,11 +98,11 @@ O algoritmo DFS disponibilizado possui um arquivo Makefile que realiza todo o pr
 <div style="display: inline-block;">
  <p align="justify"> Thaissa Vitória</p>
 <a href="https://t.me/thaissadaldegan">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
+<img align="center" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
 </a>
 
 <a href="https://www.linkedin.com/in/thaissa-vitoria-daldegan-6a84b9153/">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+<img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
 </div>
@@ -104,11 +111,11 @@ O algoritmo DFS disponibilizado possui um arquivo Makefile que realiza todo o pr
 <div style="display: inline-block;">
  <p align="justify">Bárbara Gualberto</p>
 <a href="https://t.me/barbrinas">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
+<img align="center" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
 </a>
 
 <a href="https://www.linkedin.com/in/barbara-gualberto/">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+<img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
 </div>
