@@ -84,15 +84,15 @@ O algoritmo BFS disponibilizado possui um arquivo Makefile que realiza todo o pr
 
 </div>
 
-# Integrantes
+# Contatos
 
 <div>
 <p align="justify"> Thaissa Vitória</p>
 <a href="https://t.me/thaissadaldegan">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
+<img align="center"  src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
 
 <a href="https://www.linkedin.com/in/thaissa-vitoria-daldegan-6a84b9153/">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+<img align="center"  src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 </div>
 
@@ -100,10 +100,10 @@ O algoritmo BFS disponibilizado possui um arquivo Makefile que realiza todo o pr
 <div>
 <p align="justify"> Bárbara Gualberto</p>
 <a href="https://t.me/barbrinas">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
+<img align="center" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
 
 <a href="https://www.linkedin.com/in/barbara-gualberto/">
-<img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+<img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 </div>
 
