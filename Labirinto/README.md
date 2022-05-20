@@ -2,8 +2,9 @@
 
 <p>Atividade avaliativa sobre o caminhamento em labirinto. Nesta atividade, cada dupla de alunos deve entregar um trabalho contemplando BFS e DFS.<p/>
 
-## Integrantes
+### Integrantes
 
-<p>Bárbara Braga Gualberto Correa<p/>
-<p>Thaissa Vitória Guimarães Daldegan de Sousa<p/>
-
+ <ul>
+  <li>Bárbara Braga Gualberto Correa</li>
+  <li>Thaissa Vitória Guimarães Daldegan de Sousa</li>
+ </ul>
