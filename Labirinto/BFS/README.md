@@ -46,12 +46,16 @@ Lê-se um arquivo .txt onde:
 
  Como exemplo, temos o arquivo abaixo, o programa irá ler esse arquivo "Matriz.txt":
  <div style="display: inline-block;" align="center">
+  <p> </p>
  <img src=img/arquivo.png alt=arquivo.txt>
+  <p> </p>
  </div>
  
  A matriz gerada a partir do arquivo lido será:
   <div style="display: inline-block;" align="center">
+   <p> </p>
  <img src=img/matriz.png alt=matriz> 
+   <p> </p>
  </div>
 
  Na primeira etapa da execução do algoritmo, ele enfileira a posição 0,0 da matriz.Então, ele confere e enfileira as posições adjacentes a ele([0,1] e [1,0]) e nesse processo, a variável booleana de controle das posições enfileiradas, recebe o valor "true". 
