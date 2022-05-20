@@ -16,11 +16,11 @@
 <div align="justify">
 A pilha possue uma regra básica que deve ser obedecida, essa se refere a forma como inserimos e removemos elementos dessa estrutura. Antes de iniciarmos essa discussão, observe um exemplo ilustrativo desse tipo de dados na figura abaixo.
 
-<p align="center">
+<div align="center">
 	<p> </p>
 	<img src="img/pilha.png"/> 
 	<p> </p>
-</p>
+</div>
 
 Observe que nesse tipo de estrutura há apenas um <b>único ponteiro</b> chamado <b>Topo</b>. Os métodos associados ao tipo pilha, os quais impõem as regras, são chamados PUSH (i.e., empilhar) e POP (i.e., desempilhar).
 
