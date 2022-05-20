@@ -89,7 +89,7 @@ void PercorreMatriz(int linha, int coluna)
             EmpilhaPosicao(aux, lin - 1, col);
             lin -= 1;
         }
-        else // Caso não dê mais para empilhar, desempilha
+        else if (v.baixo == 2 || v.cima == 2 || v.direita == 2 || v.esquerda == 2) // Caso não dê mais para empilhar, desempilha
         {
             DesempilhaPosicao(&aux, lin, col);
             matriz[lin][col].valor = 1;
