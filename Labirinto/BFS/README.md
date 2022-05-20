@@ -27,23 +27,22 @@
  Com relação às estruturas dinâmicas básicas de lista e pilha, há uma diferença sutil de construção que deve ser observado na fila, a ligação do último elemento inserido à "cabeça" da estrutura. Essa modificação fará com que a estrutura se comporte exatamente da mesma forma de sua variante estática,ou seja, de forma circular.
 </div>
 
-## Algortimo
+## Algoritimo
 <div align="justify">
 Em nosso algoritmo, utilizaremos o método BFS para encontrar o caminho de saída de uma matriz quadrática que é um labirinto, onde as posições poderão ter dois valores possíveis:
  <ul>
   <li> 0 - Representa os lugares onde pode se passar;</li>
-  <li> 1 - Representa os lugares onde NÃO pode se passar, as barreiras do labirinto.</li>
+  <li> 1 - Representa os lugares onde NÃO pode se passar, ou seja, as barreiras do labirinto.</li>
  </ul>
- Além de seu valor, haverá uma variável booleana que só será true quando a posição em que ela se encontra for verificada. Essa variável evitará que o algortimo confira a mesma posição mais de uma vez.
 
 Lê-se um arquivo .txt onde:
 <ul>
- <li> A primeira linha é o tamanho da matriz,número de linhas e número de colunas, respectivamente;</li>
- <li> As outras linhas são as posições onde são encontradas as barreiras do labirinto.</li>
+ <li> A primeira linha do arquivo é o tamanho da matriz, e apresenta o número de linhas e número de colunas, respectivamente;</li>
+ <li> As outras linhas são as posições onde são encontradas as barreiras do labirinto, ou seja, os locais por onde ele não pode passar.</li>
 </ul>
  
  >*Observações:* 
- > - A primeira e a última posição da matriz NÃO podem ter o valor 1(valor de barreira)
+ > - A primeira e a última posição da matriz NÃO podem ter o valor 1 (valor de barreira)
 >
 
  Como exemplo, temos o arquivo abaixo, o programa irá ler esse arquivo "Matriz.txt":
@@ -60,15 +59,14 @@ Lê-se um arquivo .txt onde:
    <p> </p>
  </div>
 
- Na primeira etapa da execução do algoritmo, ele enfileira a posição 0,0 da matriz.Então, ele confere e enfileira as posições adjacentes a ele([0,1] e [1,0]) e nesse processo, a variável booleana de controle das posições enfileiradas, recebe o valor "true". 
+Na primeira etapa da execução do algoritmo, ele enfileira a posição 0, 0 (o início) da matriz. Então, ele confere e enfileira as posições adjacentes disponíveis a ele ([0, 1] e [1, 0]). Nesse processo, as posições que já foram percorridas, recebem o valor 2 e não podem mais ser percorridas. 
  
- Depois, ele desenfilera a posição inicial e olha os próximos adjacentes.
- Esse processo de conferir adjacentes se repete até que se alcance a posição [n,n] da matriz, a diferença das pŕóximas repetições para a primeira averiguada é que a variável booleana de controle também é conferida, para que uma mesma posição não seja averiguada mais de uma vez.
+Em sequência, ele desenfilera a cabeça da fila e olha a próxima posição, que seria a nova cabeça. Esse processo de desenfileirar e olhar a cabeça seguinte se repete até que se alcance a posição [N, N] da matriz. Como dito anteriormente, a forma encontrada para evitar que o algoritmo passe pela mesma posição repetidas vezes, é setando um novo valor para a posição já visitada e enfileirada, um valor diferente de 0.
  
- Por fim, o algoritmo retora a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
+Por fim, o algoritmo imprive a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
  
 >*Interações:* 
- > - Variável que define o número de vezes que o algoritmo teve que conferir alguma posição, é incrementada toda vez que uma posição é enfileirada.
+ > - Variável que define o número de vezes que o algoritmo teve que conferir alguma posição, é incrementado +1 toda vez que uma posição é enfileirada. Dessa forma, o primeiro e o último valor também são contabilizados.
 >
 </div>
 
@@ -76,7 +74,7 @@ Lê-se um arquivo .txt onde:
 
 O algoritmo BFS disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
 
-<div align="center">
+<div>
 
 | Comando                |  Função                                                                                           |
 | -----------------------| ------------------------------------------------------------------------------------------------- |
@@ -86,31 +84,27 @@ O algoritmo BFS disponibilizado possui um arquivo Makefile que realiza todo o pr
 
 </div>
 
-# Contatos
+# Integrantes
 
-<div style="display: inline-block;">
- <p align="justify"> Thaissa Vitória</p>
+<div>
+<p align="justify"> Thaissa Vitória</p>
 <a href="https://t.me/thaissadaldegan">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
-</a>
 
 <a href="https://www.linkedin.com/in/thaissa-vitoria-daldegan-6a84b9153/">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
-
 </div>
 
 
-<div style="display: inline-block;">
- <p align="justify">Bárbara Gualberto</p>
+<div>
+<p align="justify"> Bárbara Gualberto</p>
 <a href="https://t.me/barbrinas">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/> 
-</a>
 
 <a href="https://www.linkedin.com/in/barbara-gualberto/">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
-
 </div>
 
 
