@@ -44,9 +44,13 @@ Lê-se um arquivo .txt onde:
  > - A primeira e a última posição da matriz NÃO podem ter o valor 1(valor de barreira)
 >
 
- Como exemplo, temos o arquivo abaixo, o programa irá ler o arquivo "Matriz.txt" a esquerda e gerar a matriz à direita:
+ Como exemplo, temos o arquivo abaixo, o programa irá ler esse arquivo "Matriz.txt":
  <div style="display: inline-block;" align="center">
  <img src=img/arquivo.png alt=arquivo.txt>
+ </div>
+ 
+ A matriz gerada a partir do arquivo lido será:
+  <div style="display: inline-block;" align="center">
  <img src=img/matriz.png alt=matriz> 
  </div>
 
