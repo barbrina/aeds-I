@@ -48,12 +48,19 @@ Lê-se um arquivo .txt onde:
  > - A primeira e a última posição da matriz NÃO podem ter o valor 1(valor de barreira)
 >
 
- Como exemplo, temos o arquivo abaixo, o programa irá ler o arquivo "Matriz.txt" a esquerda e gerar a matriz à direita:
+ Como exemplo, temos o arquivo abaixo, o programa irá ler esse arquivo "Matriz.txt":
  <div style="display: inline-block;" align="center">
+  <p> </p>
  <img src=img/arquivo.png alt=arquivo.txt>
- <img src=img/matriz.png alt=matriz> 
+  <p> </p>
  </div>
-
+ 
+ A matriz gerada a partir do arquivo lido será:
+  <div style="display: inline-block;" align="center">
+   <p> </p>
+ <img src=img/matriz.png alt=matriz> 
+   <p> </p>
+ </div>
  Na primeira etapa da execução do algoritmo,...
  
  Por fim, o algoritmo retora a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
