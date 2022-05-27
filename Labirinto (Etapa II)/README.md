@@ -68,7 +68,7 @@ A ideia do algoritmo é tentar acertar o menor caminho o mais rápido possível!
 
 Por convergir mais rápido, o algoritmo A* acaba explorando menos posições para achar a solução, e consequentemente possui uma performance melhor. </div>
 
-## A Fila de Prioridade
+### A Fila de Prioridade
 <div align="justify">
 Nessa estrutura, foi definido um critério de prioridade, e os elementos que mais atendem esse critério são os primeiros a serem acessados em uma consulta à estrutura. Por exemplo, se for definida uma Fila de prioridade para valores inteiros, e que o critério é o menor valor, então o menor valor existente entre os elementos da Fila será o primeiro a ser acessado em uma consulta. Independentemente da sequência em que você realiza a inserção dos valores, o menor valor sempre será o primeiro a sair da Fila. Ou seja, o menor critério sempre fura para o começo da fila, porque tem a prioridade.
 </div>
