@@ -7,6 +7,71 @@
 
 # A*, BFS e DFS
 
+## Depth-First Search-DFS
+<div align="justify">
+ A busca em profundidade (DFS) é um algoritmo utilizado para percorrer ou buscar itens dentro das estruturas de dados grafos ou árvores. Sua característica básica é percorrer todos os nós filhos ao nó raiz o mais profundo possível para somente depois retroceder. Iremos compreender a aplicação dessa mecânica no decorrer desse algoritmo.
+	<p> </p>	
+ Existem várias formas de implementar uma busca em profundidade. Pela natureza de percorrer o grafo ou árvore enquanto houverem filhos não visitados, uma solução natural é utilizar recursão. Outra abordagem é utilizar um algoritmo iterativo e utilizar uma pilha (LIFO) para controlar os nós a serem visitados.
+</div>
+
+### A Estrutura Pilha
+<div align="justify">
+A pilha possue uma regra básica que deve ser obedecida, essa se refere a forma como inserimos e removemos elementos dessa estrutura. Antes de iniciarmos essa discussão, observe um exemplo ilustrativo desse tipo de dados na figura abaixo.</div>
+
+<div align="center">
+	<p> </p>
+	<img src="img/pilha.png"/> 
+	<p> </p>
+</div>
+ 
+## Breadth-first search-BFS
+<div align="justify">
+ A busca em largura (BFS) é um algoritmo utilizado para percorrer ou buscar itens dentro das estruturas de dados grafos ou árvores. Como característica temos que a busca sempre ocorre nos filhos ou nós mais próximos ao nó pelo qual a busca foi iniciada. Vamos entender isso melhor no decorrer desse artigo. A imagem abaixo exemplifica a busca em largura em grafo.
+
+ A busca em largura pode ser implementada de várias formas. As mais utilizadas são através de recursão, que utiliza pilha (LIFO), ou iterativamente, através de uma fila (FIFO), que será o caso desse algoritmo.
+</div>
+
+### A Estrutura Fila Dinâmica
+<div align="justify">
+ Na estrutura fila dinâmica, lidamos com ponteiros, criamos blocos em memória, tratamos do acesso e navegação utilizando o ponteiro próximo ( prox ) e, com isso, definimos e manipulamos os ponteiros frente e fundo sob um modelo circular, como na imagem abaixo. 
+
+<div align="center">
+ <p> </p>
+ <img src="img/fila.png" alt=RepresentaçãoFila>
+ <p> </p>
+</div>
+
+  Para inserções, utilizamos sempre o ponteiro de fundo. Em contra partida, utilizamos o ponteiro de frente para as remoções. Essa característica torna esse modelo de estrutura em um modelo do tipo First In First Out - FIFO. Mesma regra encontrada em sua vertente estática [vide git](https://github.com/mpiress/linear_queue).
+
+ Com relação às estruturas dinâmicas básicas de lista e pilha, há uma diferença sutil de construção que deve ser observado na fila, a ligação do último elemento inserido à "cabeça" da estrutura. Essa modificação fará com que a estrutura se comporte exatamente da mesma forma de sua variante estática,ou seja, de forma circular.
+</div>
+
+Observe que nesse tipo de estrutura há apenas um <b>único ponteiro</b> chamado <b>Topo</b>. Os métodos associados ao tipo pilha, os quais impõem as regras, são chamados PUSH (i.e., empilhar) e POP (i.e., desempilhar).
+
+>Logo, temos como regra básica dessa estrutura: 
+> 1. O último elemento que entra sempre será o primeiro a ser removido. 
+
+Como a pilha é definida a partir de um vetor, muitas das caracteristicas de implementação observadas no tipo lista são aproveitados para compor sua execução. A diferença está apenas na composição da regra de manipulação, o que as diferencia em termos de execução. 
+
+</div>
+
+## A*
+<div align="justify">
+O algoritmo A* é um dos mais utilizados em situações de pathfinding, ou busca de caminhos. Ele otimiza o algoritmo do BFS em dois aspectos para tornar o seu funcionamento mais eficiente:
+
+<ul>
+ <li> Ele utiliza uma estrutura de dados chamada Fila de prioridade para organizar as posições que serão exploradas;</li>
+<li>Além de salvar os caminhos já calculados (como BFS faz), ele também utiliza heurísticas para estimar em cada ponto quanto ainda falta para o final, buscando direcionar a escolha do próximo vértice.</li>
+ </ul>
+ 
+A ideia do algoritmo é tentar acertar o menor caminho o mais rápido possível! Por isso ele olha tanto para o quanto ele já percorreu como para o quanto ainda falta na hora de estimar se um caminho é bom ou não. Ele pode não acertar de primeira, mas ele converge para o menor caminho muito mais rápida e precisamente do que as buscas por DFS e BFS conseguem fazer. De certa forma, esse algoritmo é uma combinação das duas abordagens que foram apresentadas nas seções anteriores dessa aula, utilizando o que há de melhor em cada um dos métodos.
+
+Por convergir mais rápido, o algoritmo A* acaba explorando menos posições para achar a solução, e consequentemente possui uma performance melhor. </div>
+
+## A Fila de Prioridade
+<div align="justify">
+Nessa estrutura, foi definido um critério de prioridade, e os elementos que mais atendem esse critério são os primeiros a serem acessados em uma consulta à estrutura. Por exemplo, se for definida uma Fila de prioridade para valores inteiros, e que o critério é o menor valor, então o menor valor existente entre os elementos da Fila será o primeiro a ser acessado em uma consulta. Independentemente da sequência em que você realiza a inserção dos valores, o menor valor sempre será o primeiro a sair da Fila. Ou seja, o menor critério sempre fura para o começo da fila, porque tem a prioridade.
+</div>
 
 ## Algoritimo
 <div align="justify">
