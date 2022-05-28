@@ -69,7 +69,7 @@ void PercorreBFS(int linha, int coluna, bool chave)
             EnfileiraPosicao(aux, lin - 1, col, chave, tam, heur);
         }
 
-        DesenfileiraPosicao(&aux, linha, coluna, heur);
+        DesenfileiraPosicao(&aux, linha, coluna);
         
         fimlin = f.last->data.posicao[0];
         fimcol = f.last->data.posicao[1];
@@ -99,9 +99,9 @@ void EnfileiraPosicao(ItemF aux, int linha, int coluna, bool chave, int tam, int
     }
 }
 
-void DesenfileiraPosicao(ItemF *aux, int linha, int coluna,int heur)
+void DesenfileiraPosicao(ItemF *aux, int linha, int coluna)
 {
     aux->posicao[0] = linha;
     aux->posicao[1] = coluna;
-    Desenfileira(&f, aux,heur);
+    Desenfileira(&f, aux);
 }
