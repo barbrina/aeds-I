@@ -32,7 +32,7 @@ Fila f;
 
 void FFVazia(Fila *f);
 void Enfileira(Fila *f, ItemF d);
-void Desenfileira(Fila *f, ItemF *d,int heur);
+void Desenfileira(Fila *f, ItemF *d);
 void EnfileiraA_Estrela(Fila *f, ItemF d, int heur, int tam);
 void FImprime(Fila *f);
 void OrdenaFila(Fila *f);
