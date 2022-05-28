@@ -33,7 +33,7 @@ void EnfileiraA_Estrela(Fila *f, ItemF d, int heur, int tam)
 	f->last->prox = NULL;
 }
 
-void Desenfileira(Fila *f, ItemF *d,int heur)
+void Desenfileira(Fila *f, ItemF *d)
 {
 	BlockF *aux;
 
