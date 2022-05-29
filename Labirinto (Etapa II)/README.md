@@ -64,7 +64,7 @@ O algoritmo A* é um dos mais utilizados em situações de pathfinding, ou busca
 <li>Além de salvar os caminhos já calculados (como BFS faz), ele também utiliza heurísticas para estimar em cada ponto quanto ainda falta para o final, buscando direcionar a escolha do próximo vértice.</li>
  </ul>
  
-A ideia do algoritmo é tentar acertar o menor caminho o mais rápido possível! Por isso ele olha tanto para o quanto ele já percorreu como para o quanto ainda falta na hora de estimar se um caminho é bom ou não. Ele pode não acertar de primeira, mas ele converge para o menor caminho muito mais rápida e precisamente do que as buscas por DFS e BFS conseguem fazer. De certa forma, esse algoritmo é uma combinação das duas abordagens que foram apresentadas nas seções anteriores dessa aula, utilizando o que há de melhor em cada um dos métodos.
+A ideia do algoritmo é tentar acertar o menor caminho o mais rápido possível. Por isso ele olha tanto para o quanto ele já percorreu como para o quanto ainda falta na hora de estimar se um caminho é bom ou não. Ele pode não acertar de primeira, mas ele converge para o menor caminho muito mais rápida e precisamente do que as buscas por DFS e BFS conseguem fazer. De certa forma, esse algoritmo é uma combinação das duas abordagens que foram apresentadas nas seções anteriores dessa aula, utilizando o que há de melhor em cada um dos métodos.
 
 Por convergir mais rápido, o algoritmo A* acaba explorando menos posições para achar a solução, e consequentemente possui uma performance melhor. </div>
 
@@ -72,6 +72,18 @@ Por convergir mais rápido, o algoritmo A* acaba explorando menos posições par
 <div align="justify">
 Nessa estrutura, foi definido um critério de prioridade, e os elementos que mais atendem esse critério são os primeiros a serem acessados em uma consulta à estrutura. Por exemplo, se for definida uma Fila de prioridade para valores inteiros, e que o critério é o menor valor, então o menor valor existente entre os elementos da Fila será o primeiro a ser acessado em uma consulta. Independentemente da sequência em que você realiza a inserção dos valores, o menor valor sempre será o primeiro a sair da Fila. Ou seja, o menor critério sempre fura para o começo da fila, porque tem a prioridade.
 </div>
+
+### Distância Euclidiana 
+
+<p> Em matemática, distância euclidiana (ou distância métrica) é a distância entre dois pontos, que pode ser provada pela aplicação repetida do teorema de Pitágoras. Aplicando essa fórmula como distância, o espaço euclidiano torna-se um espaço métrico.</p>
+
+$$d(x,y)=\sqrt{ \left(\sum_{i=1}^n (x_i - y_i)^2 \right) } $$
+
+### Distância Manhattan
+
+<p>A distância de Manhattan (“City Block” ou “Geometria do Táxi”) é uma forma de geometria em que a usual métrica da geometria euclidiana é substituída por uma nova métrica em que a distância entre dois pontos é a soma das diferenças absolutas de suas coordenadas. </p>
+
+$$d(x,y)=\sum_{i=1}^n |x_i - y_i|$$
 
 ## Algoritimo
 <div align="justify">
@@ -98,6 +110,8 @@ Lê-se um arquivo .txt onde:
  <img src=img/arquivo.png alt=arquivo.txt>
   <p> </p>
  </div>
+	
+<p>Criou-se um um menu onde o usuário escolhe entre dois métodos distintos de busca: o busca em profundidade (DFS) e o busca em largura (BFS). Caso o usuário escolha o método de busca em largura, a matriz será printada na tela e o número de interações necessárias para chegar até o final é mostrado. Caso o usuário escolha o método de busca em profundidade, ele ainda tem mais duas escolhas: se o BFS irá percorrer utilizando o cálculo de heurística ou não e qual o cálculo de heurística desejado, a distância de Manhattan ou a distância Euclidiana. Por fim, a matriz e o número de interações necessária para chegar até o final da matriz é mostrado.</p>
  
  A matriz gerada a partir do arquivo lido será:
   <div style="display: inline-block;" align="center">
@@ -105,8 +119,17 @@ Lê-se um arquivo .txt onde:
  <img src=img/matriz.png alt=matriz> 
    <p> </p>
  </div>
-
-
+	
+<p> O programa funciona da seguinte maneira: </p>
+	
+<ul>
+<li>Após a escolha do método de distância, o BFS é chamado e a cada posição da matriz que ele percorre é adicionado a uma fila;</li>
+<li>A cada enfileiramento, o cálculo da heurística é feito, e com os valores recebidos, a fila é ordenada;</li>
+<li>Quando a fila é ordenada, o caminho mais próximo ao final da matriz se torna o primeiro valor da fila, e as posições em volta dele são avaliados;</li>
+<li>Este método se segue até o final da matriz, e o número de interações é demonstrado na tela.
+</li>
+</ul>	
+	
 # Compilação e Execução
 
 O algoritmo disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
