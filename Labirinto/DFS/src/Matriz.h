@@ -12,8 +12,6 @@ typedef struct data
     int valor;
 } Data;
 
-Data matriz[MAXTAM][MAXTAM];
-
 typedef struct valores
 {
     int direita;
