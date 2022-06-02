@@ -1,5 +1,7 @@
 #include "Matriz.h"
 
+Data matriz[MAXTAM][MAXTAM];
+
 void CriarMatriz(int linha, int coluna)
 {
     for (int lin = 0; lin < linha; lin++)
