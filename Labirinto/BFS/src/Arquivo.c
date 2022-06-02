@@ -3,7 +3,7 @@
 void Abre_arq(Fila *f)
 {
     FILE *arq;
-    char valor[4];
+    char valor[5];
     char *result;
 
     // Abre um arquivo texto para Leitura
