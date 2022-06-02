@@ -66,14 +66,11 @@ Lê-se um arquivo .txt onde:
 Na primeira etapa da execução do algoritmo, ele empilha a posição 0, 0 (o início) da matriz. Então, ele confere a posição abaixo e percorre ela até bater em um obstáculo ou no fim da matriz, empilhando todas as posições percorridas. Nesse processo, as posições que já foram percorridas, recebem o valor 2 e não podem mais ser percorridas.
 	
 As posições que apresentam uma barreira fazem com que o algoritmo percorra outro caminho. Seguindo a ordem de olhar para baixo, direita, esquerda e acima, caso necessário. Caso o algoritmo se encontre preso entre barreiras, ele desempilha o topo da matriz e atribui o valor 1 a ela, dessa forma não passando mais por tal caminho, e em busca de outra posição para que ele possa percorrer.
- 
-Por fim, o algoritmo imprive a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
- 
-
 
 Em sequência, ele desenfilera a cabeça da fila e olha a próxima posição, que seria a nova cabeça. Esse processo de desenfileirar e olhar a cabeça seguinte se repete até que se alcance a posição [N, N] da matriz. Como dito anteriormente, a forma encontrada para evitar que o algoritmo passe pela mesma posição repetidas vezes, é setando um novo valor para a posição já visitada e enfileirada, um valor diferente de 0.
 
-Por fim, o algoritmo imprive a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
+O algoritmo imprime a variável que conta o número de interações que ele necessitou para conseguir alcançar o final do labirinto.
+Por fim, imprime a matriz novamente, mostrando, a partir dos 2 colocados nas posições já percorridas, por onde o algoritmo passou no labirinto.
  
 >*Interações:* 
  > - Variável que define o número de vezes que o algoritmo teve que conferir alguma posição. É incrementado +1 toda vez que uma posição é empilhada, dessa forma, o primeiro e o último valor também são contabilizados.
