@@ -26,8 +26,6 @@ struct Fila
 	Block *last;
 };
 
-Fila f;
-
 void FFVazia(Fila *f);
 void Enfileira(Fila *f, Item d);
 void Desenfileira(Fila *f, Item *d);

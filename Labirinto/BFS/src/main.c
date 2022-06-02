@@ -2,7 +2,9 @@
 
 int main()
 {
+	Fila f;
+
 	FFVazia(&f);
-	Abre_arq();
+	Abre_arq(&f);
 	return 0;
 }

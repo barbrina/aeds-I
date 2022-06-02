@@ -1,6 +1,6 @@
 #include "Arquivo.h"
 
-void Abre_arq()
+void Abre_arq(Fila *f)
 {
     FILE *arq;
     char valor[4];
@@ -46,7 +46,9 @@ void Abre_arq()
 
     ImprimirMatriz(linha, coluna);
 
-    PercorreMatriz(linha, coluna);
+    PercorreMatriz(linha, coluna, f);
+
+    ImprimirMatriz(linha, coluna);
 
     fclose(arq);
 }

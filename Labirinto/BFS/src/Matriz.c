@@ -18,20 +18,20 @@ void PreencherMatriz(int linha, int coluna)
     matriz[linha][coluna].valor = 1;
 }
 
-void PercorreMatriz(int linha, int coluna)
+void PercorreMatriz(int linha, int coluna, Fila *f)
 {
     int lin = 0, col = 0;
     int fimlin, fimcol, interacoes = 1;
 
     Item aux;
 
-    EnfileiraPosicao(aux, lin, col);
+    EnfileiraPosicao(aux, lin, col, f);
     matriz[lin][col].valor = 2;
 
     do
     {
-        lin = f.first->prox->data.posicao[0];
-        col = f.first->prox->data.posicao[1];
+        lin = f->first->prox->data.posicao[0];
+        col = f->first->prox->data.posicao[1];
 
         Valores v;
 
@@ -53,31 +53,31 @@ void PercorreMatriz(int linha, int coluna)
         {
             interacoes++;
             matriz[lin][col + 1].valor = 2;
-            EnfileiraPosicao(aux, lin, col + 1);
+            EnfileiraPosicao(aux, lin, col + 1, f);
         }
         if (v.baixo == 0)
         {
             interacoes++;
             matriz[lin + 1][col].valor = 2;
-            EnfileiraPosicao(aux, lin + 1, col);
+            EnfileiraPosicao(aux, lin + 1, col, f);
         }
         if (v.esquerda == 0)
         {
             interacoes++;
             matriz[lin][col - 1].valor = 2;
-            EnfileiraPosicao(aux, lin, col - 1);
+            EnfileiraPosicao(aux, lin, col - 1, f);
         }
         if (v.cima == 0)
         {
             interacoes++;
             matriz[lin - 1][col].valor = 2;
-            EnfileiraPosicao(aux, lin - 1, col);
+            EnfileiraPosicao(aux, lin - 1, col, f);
         }
 
-        DesenfileiraPosicao(&aux, linha, coluna);
+        DesenfileiraPosicao(&aux, linha, coluna, f);
 
-        fimlin = f.last->data.posicao[0];
-        fimcol = f.last->data.posicao[1];
+        fimlin = f->last->data.posicao[0];
+        fimcol = f->last->data.posicao[1];
 
     } while (fimlin + 1 != linha || fimcol + 1 != coluna);
 
@@ -93,19 +93,19 @@ int ChecarValor(int valor, int lin, int col, int linha, int coluna)
     return valor;
 }
 
-void EnfileiraPosicao(Item aux, int linha, int coluna)
+void EnfileiraPosicao(Item aux, int linha, int coluna, Fila *f)
 {
     aux.posicao[0] = linha;
     aux.posicao[1] = coluna;
-    Enfileira(&f, aux);
+    Enfileira(f, aux);
 }
 
-void DesenfileiraPosicao(Item *aux, int linha, int coluna)
+void DesenfileiraPosicao(Item *aux, int linha, int coluna, Fila *f)
 {
 
     aux->posicao[0] = linha;
     aux->posicao[1] = coluna;
-    Desenfileira(&f, aux);
+    Desenfileira(f, aux);
 }
 
 void ImprimirMatriz(int linha, int coluna)
