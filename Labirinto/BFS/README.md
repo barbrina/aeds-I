@@ -64,7 +64,7 @@ Na primeira etapa da execução do algoritmo, ele enfileira a posição 0, 0 (o 
  
 Em sequência, ele desenfilera a cabeça da fila e olha a próxima posição, que seria a nova cabeça. Esse processo de desenfileirar e olhar a cabeça seguinte se repete até que se alcance a posição [N, N] da matriz. Como dito anteriormente, a forma encontrada para evitar que o algoritmo passe pela mesma posição repetidas vezes, é setando um novo valor para a posição já visitada e enfileirada, um valor diferente de 0.
 
-O algoritmo imprime a variável que conta o número de interações que o algoritmo necessitou para conseguir alcançar o final do labirinto.
+O algoritmo imprime a variável que conta o número de interações que ele necessitou para conseguir alcançar o final do labirinto.
 Por fim, imprime a matriz novamente, mostrando, a partir dos 2 colocados nas posições já percorridas, por onde o algoritmo passou no labirinto.
  
 >*Interações:* 
