@@ -4,6 +4,6 @@
 #include "Pilha.h"
 #include "string.h"
 
-void Abre_arq();
+void Abre_arq(Pilha *p);
 
 #endif

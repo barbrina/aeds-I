@@ -1,10 +1,10 @@
 #include "Arquivo.h"
 #include "Matriz.h"
 
-void Abre_arq()
+void Abre_arq(Pilha *p)
 {
     FILE *arq;
-    char valor[4];
+    char valor[5];
     char *result;
 
     // Abre um arquivo texto para Leitura
@@ -46,7 +46,8 @@ void Abre_arq()
     }
 
     ImprimirMatriz(linha, coluna);
-    PercorreMatriz(linha, coluna);
+    PercorreMatriz(linha, coluna, p);
+    ImprimirMatriz(linha, coluna);
 
     fclose(arq);
 }

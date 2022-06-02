@@ -26,8 +26,6 @@ struct Pilha
     Block *top;
 };
 
-Pilha p;
-
 void FPVazia(Pilha *p);
 void Push(Pilha *p, Item d);
 void Pop(Pilha *p, Item *d);

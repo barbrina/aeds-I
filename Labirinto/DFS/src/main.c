@@ -3,8 +3,10 @@
 
 int main()
 {
+    Pilha p;
+
     FPVazia(&p);
-    Abre_arq();
+    Abre_arq(&p);
 
     return 0;
 }

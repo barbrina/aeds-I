@@ -24,9 +24,9 @@ void CriarMatriz(int linha, int coluna);
 void PreencherMatriz(int linha, int coluna);
 void ImprimirMatriz(int linha, int coluna);
 
-void PercorreMatriz(int linha, int coluna);
+void PercorreMatriz(int linha, int coluna, Pilha *p);
 int ChecarValor(int valor, int lin, int col, int linha, int coluna);
-void EmpilhaPosicao(Item aux, int linha, int coluna);
-void DesempilhaPosicao(Item *aux, int linha, int coluna);
+void EmpilhaPosicao(Item aux, int linha, int coluna, Pilha *p);
+void DesempilhaPosicao(Item *aux, int linha, int coluna, Pilha *p);
 
 #endif
