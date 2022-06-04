@@ -5,7 +5,7 @@
 
 #define MAXTAM 7
 
-void PercorreBFS(int linha, int coluna, bool chave, Fila *f);
+void PercorreBFS(int linha, int coluna, bool chave, Fila *f,Data matriz[MAXTAM][MAXTAM]);
 void EnfileiraPosicao(ItemF aux, int linha, int coluna, bool chave, int tam, int heur, Fila *f);
 void DesenfileiraPosicao(ItemF *aux, int linha, int coluna, Fila *f);
 

@@ -1,6 +1,6 @@
 #include "Arquivo.h"
 
-void Abre_arq(Fila *f, Pilha *p)
+void Abre_arq(Fila *f, Pilha *p,Data matriz[MAXTAM][MAXTAM])
 {
     FILE *arq;
     char valor[4];
@@ -32,19 +32,19 @@ void Abre_arq(Fila *f, Pilha *p)
             {
                 linha = valor[0] - '0'; // Transforma em inteiro
                 coluna = valor[2] - '0';
-                CriarMatriz(linha, coluna);
+                CriarMatriz(linha, coluna,matriz);
             }
             else
             {
                 int lin = valor[0] - '0'; // Transforma em inteiro
                 int col = valor[2] - '0';
-                PreencherMatriz(lin, col);
+                PreencherMatriz(lin, col,matriz);
             }
         }
         i++;
     }
 
-    ImprimirMatriz(linha, coluna);
+    ImprimirMatriz(linha, coluna,matriz);
 
     int metodo, a;
     bool chave = false;
@@ -57,17 +57,20 @@ void Abre_arq(Fila *f, Pilha *p)
         if (a == 1)
         {
             chave = true;
-            PercorreBFS(linha, coluna, chave, f);
+            PercorreBFS(linha, coluna, chave, f,matriz);
         }
         else
         {
-            PercorreBFS(linha, coluna, chave, f);
+            PercorreBFS(linha, coluna, chave, f,matriz);
         }
     }
     else
     {
-        PercorreDFS(linha, coluna, p);
+        PercorreDFS(linha, coluna, p,matriz);
     }
+
+    printf("\nImprimindo a matriz depois de percorrida:\n\n");
+    ImprimirMatriz(linha, coluna,matriz);
 
     fclose(arq);
 }

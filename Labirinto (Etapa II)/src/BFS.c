@@ -1,6 +1,6 @@
 #include "BFS.h"
 
-void PercorreBFS(int linha, int coluna, bool chave, Fila *f)
+void PercorreBFS(int linha, int coluna, bool chave, Fila *f,Data matriz[MAXTAM][MAXTAM])
 {
     int lin = 0, col = 0, tam = linha;
     int fimlin, fimcol, interacoes = 1;

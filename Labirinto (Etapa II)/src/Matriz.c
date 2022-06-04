@@ -1,6 +1,6 @@
 #include "Matriz.h"
 
-void CriarMatriz(int linha, int coluna)
+void CriarMatriz(int linha, int coluna,Data matriz[MAXTAM][MAXTAM])
 {
     for (int lin = 0; lin < linha; lin++)
     {
@@ -11,12 +11,12 @@ void CriarMatriz(int linha, int coluna)
     }
 }
 
-void PreencherMatriz(int linha, int coluna)
+void PreencherMatriz(int linha, int coluna,Data matriz[MAXTAM][MAXTAM])
 {
     matriz[linha][coluna].valor = 1;
 }
 
-void ImprimirMatriz(int linha, int coluna)
+void ImprimirMatriz(int linha, int coluna,Data matriz[MAXTAM][MAXTAM])
 {
     for (int lin = 0; lin < linha; lin++)
     {

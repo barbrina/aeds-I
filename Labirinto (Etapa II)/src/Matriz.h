@@ -12,8 +12,6 @@ typedef struct data
     int valor;
 } Data;
 
-Data matriz[MAXTAM][MAXTAM];
-
 typedef struct valores
 {
     int direita;
@@ -22,9 +20,9 @@ typedef struct valores
     int cima;
 } Valores;
 
-void CriarMatriz(int linha, int coluna);
-void PreencherMatriz(int linha, int coluna);
-void ImprimirMatriz(int linha, int coluna);
+void CriarMatriz(int linha, int coluna,Data matriz[MAXTAM][MAXTAM]);
+void PreencherMatriz(int linha, int coluna,Data matriz[MAXTAM][MAXTAM]);
+void ImprimirMatriz(int linha, int coluna,Data matriz[MAXTAM][MAXTAM]);
 int ChecarValor(int valor, int lin, int col, int linha, int coluna);
 
 #endif

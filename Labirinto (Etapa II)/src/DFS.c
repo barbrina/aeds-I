@@ -1,6 +1,6 @@
 #include "DFS.h"
 
-void PercorreDFS(int linha, int coluna, Pilha *p)
+void PercorreDFS(int linha, int coluna, Pilha *p,Data matriz[MAXTAM][MAXTAM])
 {
     int lin = 0, col = 0, interacoes = 1;
 

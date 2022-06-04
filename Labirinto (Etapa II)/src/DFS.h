@@ -9,7 +9,7 @@
 
 #define MAXTAM 7
 
-void PercorreDFS(int linha, int coluna,Pilha *p);
+void PercorreDFS(int linha, int coluna,Pilha *p,Data matriz[MAXTAM][MAXTAM]);
 void EmpilhaPosicao(ItemP aux, int linha, int coluna,Pilha *p);
 void DesempilhaPosicao(ItemP *aux, int linha, int coluna,Pilha *p);
 
