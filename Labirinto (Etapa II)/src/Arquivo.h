@@ -6,6 +6,6 @@
 #include "DFS.h"
 #include <string.h>
 
-void Abre_arq();
+void Abre_arq(Fila *f, Pilha *p);
 
 #endif

@@ -1,19 +1,19 @@
 #include "DFS.h"
 
-void PercorreDFS(int linha, int coluna)
+void PercorreDFS(int linha, int coluna, Pilha *p)
 {
     int lin = 0, col = 0, interacoes = 1;
 
     ItemP aux;
 
-    EmpilhaPosicao(aux, lin, col);
+    EmpilhaPosicao(aux, lin, col, p);
     matriz[lin][col].valor = 2;
 
     do
     {
 
-        lin = p.top->data.posicao[0];
-        col = p.top->data.posicao[1];
+        lin = p->top->data.posicao[0];
+        col = p->top->data.posicao[1];
 
         Valores v;
 
@@ -37,33 +37,33 @@ void PercorreDFS(int linha, int coluna)
         {
             interacoes++;
             matriz[lin + 1][col].valor = 2;
-            EmpilhaPosicao(aux, lin + 1, col);
+            EmpilhaPosicao(aux, lin + 1, col, p);
             lin += 1;
         }
         else if (v.direita == 0)
         {
             interacoes++;
             matriz[lin][col + 1].valor = 2;
-            EmpilhaPosicao(aux, lin, col + 1);
+            EmpilhaPosicao(aux, lin, col + 1, p);
             col += 1;
         }
         else if (v.esquerda == 0)
         {
             interacoes++;
             matriz[lin][col - 1].valor = 2;
-            EmpilhaPosicao(aux, lin, col - 1);
+            EmpilhaPosicao(aux, lin, col - 1, p);
             col -= 1;
         }
         else if (v.cima == 0)
         {
             interacoes++;
             matriz[lin - 1][col].valor = 2;
-            EmpilhaPosicao(aux, lin - 1, col);
+            EmpilhaPosicao(aux, lin - 1, col, p);
             lin -= 1;
         }
         else if (v.baixo == 2 || v.cima == 2 || v.direita == 2 || v.esquerda == 2) // Caso não dê mais para empilhar, desempilha
         {
-            DesempilhaPosicao(&aux, lin, col);
+            DesempilhaPosicao(&aux, lin, col, p);
             matriz[lin][col].valor = 1;
         }
 
@@ -72,16 +72,16 @@ void PercorreDFS(int linha, int coluna)
     printf("\nO número de interações é %d\n", interacoes);
 }
 
-void EmpilhaPosicao(ItemP aux, int linha, int coluna)
+void EmpilhaPosicao(ItemP aux, int linha, int coluna, Pilha *p)
 {
     aux.posicao[0] = linha;
     aux.posicao[1] = coluna;
-    Push(&p, aux);
+    Push(p, aux);
 }
 
-void DesempilhaPosicao(ItemP *aux, int linha, int coluna)
+void DesempilhaPosicao(ItemP *aux, int linha, int coluna, Pilha *p)
 {
     aux->posicao[0] = linha;
     aux->posicao[1] = coluna;
-    Pop(&p, aux);
+    Pop(p, aux);
 }

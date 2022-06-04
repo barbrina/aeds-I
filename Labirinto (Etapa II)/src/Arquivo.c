@@ -1,6 +1,6 @@
 #include "Arquivo.h"
 
-void Abre_arq()
+void Abre_arq(Fila *f, Pilha *p)
 {
     FILE *arq;
     char valor[4];
@@ -54,21 +54,19 @@ void Abre_arq()
     {
         printf("Você gostaria de utilizar o A*?\n1-Sim\n2-Não\nR: ");
         scanf("%d", &a);
-        FFVazia(&f);
         if (a == 1)
         {
             chave = true;
-            PercorreBFS(linha, coluna, chave);
+            PercorreBFS(linha, coluna, chave, f);
         }
         else
         {
-            PercorreBFS(linha, coluna, chave);
+            PercorreBFS(linha, coluna, chave, f);
         }
     }
     else
     {
-        FPVazia(&p);
-        PercorreDFS(linha, coluna);
+        PercorreDFS(linha, coluna, p);
     }
 
     fclose(arq);

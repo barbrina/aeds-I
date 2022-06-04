@@ -2,7 +2,11 @@
 
 int main()
 {
-	Abre_arq();
+	Fila f;
+	Pilha p;
+	FPVazia(&p);
+	FFVazia(&f);
+	Abre_arq(&f, &p);
 
 	return 0;
 }

@@ -1,31 +1,30 @@
 #include "BFS.h"
 
-void PercorreBFS(int linha, int coluna, bool chave)
+void PercorreBFS(int linha, int coluna, bool chave, Fila *f)
 {
     int lin = 0, col = 0, tam = linha;
     int fimlin, fimcol, interacoes = 1;
 
     ItemF aux;
 
-    int heur=0;
+    int heur = 0;
 
-    if(chave)
+    if (chave)
     {
         printf("Qual heurística deseja utilizar para realizar os cálculos?\n");
         printf("1-Manhattan\n");
         printf("2-Euclidiana.\n");
         printf("R:");
         scanf("%d", &heur);
-                
     }
 
-    EnfileiraPosicao(aux, lin, col, chave, tam, heur);
+    EnfileiraPosicao(aux, lin, col, chave, tam, heur, f);
     matriz[lin][col].valor = 2;
 
     do
     {
-        lin = f.first->prox->data.posicao[0];
-        col = f.first->prox->data.posicao[1];
+        lin = f->first->prox->data.posicao[0];
+        col = f->first->prox->data.posicao[1];
 
         Valores v;
 
@@ -43,40 +42,39 @@ void PercorreBFS(int linha, int coluna, bool chave)
         v.baixo = ChecarValor(v.baixo, lin + 1, col, linha - 1, coluna - 1);
         v.cima = ChecarValor(v.cima, lin - 1, col, linha - 1, coluna - 1);
 
-
         if (v.baixo == 0)
         {
             interacoes++;
             matriz[lin + 1][col].valor = 2;
-            EnfileiraPosicao(aux, lin + 1, col, chave, tam, heur);
+            EnfileiraPosicao(aux, lin + 1, col, chave, tam, heur, f);
         }
         if (v.direita == 0)
         {
             interacoes++;
             matriz[lin][col + 1].valor = 2;
-            EnfileiraPosicao(aux, lin, col + 1, chave, tam, heur);
+            EnfileiraPosicao(aux, lin, col + 1, chave, tam, heur, f);
         }
         if (v.esquerda == 0)
         {
             interacoes++;
             matriz[lin][col - 1].valor = 2;
-            EnfileiraPosicao(aux, lin, col - 1, chave, tam, heur);
+            EnfileiraPosicao(aux, lin, col - 1, chave, tam, heur, f);
         }
         if (v.cima == 0)
         {
             interacoes++;
             matriz[lin - 1][col].valor = 2;
-            EnfileiraPosicao(aux, lin - 1, col, chave, tam, heur);
+            EnfileiraPosicao(aux, lin - 1, col, chave, tam, heur, f);
         }
 
-        DesenfileiraPosicao(&aux, linha, coluna);
-        
-        fimlin = f.last->data.posicao[0];
-        fimcol = f.last->data.posicao[1];
+        DesenfileiraPosicao(&aux, linha, coluna, f);
 
-        if(heur!=0)
+        fimlin = f->last->data.posicao[0];
+        fimcol = f->last->data.posicao[1];
+
+        if (heur != 0)
         {
-            OrdenaFila(&f);
+            OrdenaFila(f);
         }
 
     } while (fimlin + 1 != linha || fimcol + 1 != coluna);
@@ -84,24 +82,24 @@ void PercorreBFS(int linha, int coluna, bool chave)
     printf("\nO número de interações é %d\n", interacoes);
 }
 
-void EnfileiraPosicao(ItemF aux, int linha, int coluna, bool chave, int tam, int heur)
+void EnfileiraPosicao(ItemF aux, int linha, int coluna, bool chave, int tam, int heur, Fila *f)
 {
     aux.posicao[0] = linha;
     aux.posicao[1] = coluna;
 
-    if (heur!=0)
+    if (heur != 0)
     {
-        EnfileiraA_Estrela(&f, aux, heur, tam);
+        EnfileiraA_Estrela(f, aux, heur, tam);
     }
     else
     {
-        Enfileira(&f, aux);
+        Enfileira(f, aux);
     }
 }
 
-void DesenfileiraPosicao(ItemF *aux, int linha, int coluna)
+void DesenfileiraPosicao(ItemF *aux, int linha, int coluna, Fila *f)
 {
     aux->posicao[0] = linha;
     aux->posicao[1] = coluna;
-    Desenfileira(&f, aux);
+    Desenfileira(f, aux);
 }
