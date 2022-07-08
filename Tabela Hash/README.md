@@ -53,11 +53,19 @@ função hash (função auxiliar) é utilizada para calcular a nova posição. <
 
 ## Desenvolvimento do problema
 
-### Hash fechada
+<p>  O problema foi desenvolvido da seguinte maneira: </p>
 
-### Hash aberta dupla
+<p> 1) Um vetor de tamanho 20 é criado e nele são passados valores randômicos de 0 a 19. Estes valores randômicos podem ser alterados para uma faixa de números maiores </p>
 
+<p> 2) A tabela Hash fechada e aberta dupla são criadas e inicializadas com tamanho 41 (o dobro do tamanho da lista de números randômicos criados e um número primo). A tabela hash fechada recebe chaves de valores -1, um valor booleano falso e um vetor de 20 posições, preenchido com valores -1. Já a tabela hash dupla aberta recebe chaves de valores -1 e valores inteiros iguais a 0. </p>
 
+<p> 3) Para a hash fechada, após o cálculo da chave (hash) através do valor passado e o tamanho total da tabela (41), o valor é armazenado na sua respectiva chave. Valores em que o cálculo da chave dão o mesmo número são armazenado na mesma chave, dentro do vetor de 20 posições e o número de colisões é contabilizado. Para a hash aberta de endereçamento duplo, caso após o cálculo da chave (hash) apresentem o mesmo valor, um novo cálculo é realizado (rehash) até que o valor possa ser armazenado em uma posição vazia, e o número de colisões é contabilizado. Uma condição de parada foi colocada para caso a rehash não encontre uma posição para o valor. </p>
+
+<p> 4) O número de colisões é mostrado na tela. </p>
+
+### Discussão
+
+<p> No geral, comparando as duas estruturas</p>
 
 # Compilação e Execução
 
