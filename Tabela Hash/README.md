@@ -65,7 +65,7 @@ função hash (função auxiliar) é utilizada para calcular a nova posição. <
 
 ### Discussão
 
-<p> No geral, comparando as duas estruturas</p>
+<p> No geral, comparando as duas estruturas, é possível observar que, na maioria das vezes, a estrutura de hash aberta dupla tem o dobro do número de colisões que a estrtutura de hash fechada. Isso ocorre pois na estrutura de endereçamento duplo, muitas colisões podem acontecer até que seja possível encontrar uma chave vazia para que o valor seja armazanado, pois um novo cálculo sempre é realizado após uma colisão, que pode acabar gerando uma nova colisão. Já na estrutura fechada, quando ocorre a colisão, novas posições não são procuradas, o valor é imediatamente armazenado na lista estática. </p>
 
 # Compilação e Execução
 
